@@ -58,7 +58,7 @@ body {
 }
 .card-body,
 #exampleModalBody {
-  word-break: break-all;
+  word-break: break-word;
   hyphens: auto;
 }
 @media (min-width: 34em) {
