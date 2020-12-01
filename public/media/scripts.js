@@ -81,6 +81,10 @@ $(document).ready(function () {
     event.preventDefault();
     var title = $("#headerInput").val();
     var body = $("#bodyInput").val();
+    if (body == "") {
+      alert("The body is empty!");
+      return false;
+    }
     var radioValue = $("input[name='inlineRadioOptions']:checked").val();
     var item = LocalStorage.add(title, body, radioValue);
     $("#headerInput").val("");
