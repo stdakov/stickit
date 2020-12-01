@@ -7,6 +7,14 @@ function escapeHtml(unsafe) {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
 }
+
+function htmlEntities(html) {
+  html = html.replace(/[<>]/g, function (match) {
+    if (match === "<") return "&lt;";
+    else return "&gt;";
+  });
+  return html;
+}
 var LocalStorage = new (function () {
   this.storageSpace = "";
   this.data = [];

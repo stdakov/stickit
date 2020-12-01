@@ -56,7 +56,9 @@ body {
 .radio-white[type="radio"]::before {
   border: 2px solid #bababa;
 }
-
+.card {
+  word-break: break-all;
+}
 @media (min-width: 34em) {
   .card-columns {
     -webkit-column-count: 2;
