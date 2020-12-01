@@ -56,8 +56,10 @@ body {
 .radio-white[type="radio"]::before {
   border: 2px solid #bababa;
 }
-.card {
+.card-body,
+#exampleModalBody {
   word-break: break-all;
+  hyphens: auto;
 }
 @media (min-width: 34em) {
   .card-columns {
