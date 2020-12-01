@@ -61,6 +61,9 @@ body {
   word-break: break-word;
   hyphens: auto;
 }
+.btn-copy {
+  background-color: #ffe54c;
+}
 @media (min-width: 34em) {
   .card-columns {
     -webkit-column-count: 2;

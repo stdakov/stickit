@@ -121,6 +121,13 @@ $(document).ready(function () {
   $(document).on("click", ".card-columns .card", function (e) {
     e.preventDefault();
     var target = $(e.target);
+    var itemId = $(this).data("item-id");
+    var item = LocalStorage.get(itemId);
+    if (target.is("button") && target.hasClass("btn-copy")) {
+      copyText(item.body);
+      target.fadeOut(500).fadeIn(500);
+      return false;
+    }
     if (target.is("button")) {
       return false;
     }
@@ -129,8 +136,6 @@ $(document).ready(function () {
       return false;
     }
 
-    var itemId = $(this).data("item-id");
-    var item = LocalStorage.get(itemId);
     $("#exampleModalLabel").text(item.title);
     $("#exampleModalBody").html(item.body);
     $("#exampleModal").modal();
@@ -175,7 +180,8 @@ $(document).ready(function () {
       '<div class="card-header">' +
       (item.title == null || item.title == "" ? "-" : item.title) +
       "\n" +
-      '<button class="btn-danger remove float-right">x</button>\n' +
+      '<button class="btn btn-sm btn-danger remove float-right">x</button>\n' +
+      '<button class="btn btn-sm btn-copy float-right">copy</button>\n' +
       "</div>\n" +
       '<div class="card-body">\n' +
       '<p class="card-text">' +
@@ -202,5 +208,19 @@ $(document).ready(function () {
       return document.selection.createRange().text;
     }
     return "";
+  }
+
+  function copyText(copyText) {
+    var fullLink = document.createElement("input");
+    document.body.appendChild(fullLink);
+    fullLink.value = copyText;
+    fullLink.select();
+    document.execCommand("copy", false);
+    fullLink.remove();
+
+    // copyText.select();
+    // copyText.setSelectionRange(0, 99999);
+    // document.execCommand("copy");
+    // alert("Copied the text: " + copyText.value);
   }
 });
