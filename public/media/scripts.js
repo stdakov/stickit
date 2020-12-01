@@ -1,5 +1,12 @@
 "use strict";
-
+function escapeHtml(unsafe) {
+  return unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
 var LocalStorage = new (function () {
   this.storageSpace = "";
   this.data = [];
@@ -32,7 +39,7 @@ var LocalStorage = new (function () {
     var item = {
       id: id + 1,
       title: title == null || title == "" ? "-" : title,
-      body: body.replace(/\r?\n/g, "<br />"),
+      body: escapeHtml(body).replace(/\r?\n/g, "<br />"),
       color: color,
     };
     this.data.push(item);
