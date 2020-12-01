@@ -120,15 +120,17 @@ $(document).ready(function () {
 
   $(document).on("click", ".card-columns .card", function (e) {
     e.preventDefault();
-    console.log(e);
     var target = $(e.target);
     if (target.is("button")) {
       return false;
     }
 
+    if (getSelectedText() != "") {
+      return false;
+    }
+
     var itemId = $(this).data("item-id");
     var item = LocalStorage.get(itemId);
-    console.log(item);
     $("#exampleModalLabel").text(item.title);
     $("#exampleModalBody").html(item.body);
     $("#exampleModal").modal();
@@ -191,5 +193,14 @@ $(document).ready(function () {
     }
 
     return text.substr(0, length) + "\u2026";
+  }
+
+  function getSelectedText() {
+    if (window.getSelection) {
+      return window.getSelection().toString();
+    } else if (document.selection) {
+      return document.selection.createRange().text;
+    }
+    return "";
   }
 });
