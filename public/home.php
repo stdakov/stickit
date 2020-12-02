@@ -17,6 +17,29 @@
 
     <nav class="navbar navbar-light bg-light fixed-top">
         <a class="navbar-brand" href="#">Stick it</a>
+        <fieldset class="form-group">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input radio-primary" type="radio" checked name="inlineRadioOptions" value="primary">
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input radio-secondary" type="radio" name="inlineRadioOptions" value="secondary">
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input radio-success" type="radio" name="inlineRadioOptions" value="success">
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input radio-danger" type="radio" name="inlineRadioOptions" value="danger">
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input radio-warning" type="radio" name="inlineRadioOptions" value="warning">
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input radio-info" type="radio" name="inlineRadioOptions" value="info">
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input radio-white" type="radio" name="inlineRadioOptions" value="white">
+            </div>
+        </fieldset>
         <button type="button" id="show-sticky-form" class="btn my-2 my-sm-0 btn-success  float-right" data-toggle="modal" data-target="#stickyForm">
             Add Sticky
         </button>

@@ -113,3 +113,7 @@ body {
 .container-fluid {
   padding-top: 60px;
 }
+
+.navbar {
+  padding: 5 10 5 10 !important;
+}
