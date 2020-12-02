@@ -106,13 +106,10 @@ body {
   transition: 0.3s;
 }
 
-.form-sticky {
-  width: 100%;
-  max-width: 420px;
-  padding: 5px;
-  margin: auto;
-}
-
 .modal {
   top: 10%;
+}
+
+.container-fluid {
+  padding-top: 60px;
 }

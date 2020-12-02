@@ -14,45 +14,13 @@
 </head>
 
 <body>
-    <div class="form-sticky">
-        <div class="page-header">
-            <h1 id="containers">Stick it</h1>
-        </div>
-        <div class="card border-secondary mb-3">
-            <form>
-                <div class="card-header"><input type="text" class="form-control" id="headerInput" placeholder="Header..."></div>
-                <div class="card-body">
-                    <div class="form-group">
-                        <textarea class="form-control" id="bodyInput" rows="5" placeholder="Body ..."></textarea>
-                    </div>
-                    <fieldset class="form-group">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input radio-primary" type="radio" checked name="inlineRadioOptions" value="primary">
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input radio-secondary" type="radio" name="inlineRadioOptions" value="secondary">
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input radio-success" type="radio" name="inlineRadioOptions" value="success">
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input radio-danger" type="radio" name="inlineRadioOptions" value="danger">
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input radio-warning" type="radio" name="inlineRadioOptions" value="warning">
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input radio-info" type="radio" name="inlineRadioOptions" value="info">
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input radio-white" type="radio" name="inlineRadioOptions" value="white">
-                        </div>
-                    </fieldset>
-                    <button type="submit" class="btn btn-primary float-right">Add</button>
-                </div>
-            </form>
-        </div>
-    </div>
+
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Stick it</a>
+        <button type="button" id="show-sticky-form" class="btn my-2 my-sm-0 btn-success  float-right" data-toggle="modal" data-target="#stickyForm">
+            Add Sticky
+        </button>
+    </nav>
     <div class="container-fluid">
 
         <div class="row">
@@ -80,6 +48,54 @@
                 </div>
                 <div class="modal-body">
                     <p id="exampleModalBody"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="stickyForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelForm" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelForm">Stick it</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form autocomplete="off">
+                        <div class=""><input type="text" class="form-control" id="headerInput" placeholder="Header..."></div>
+                        <br />
+                        <div class="">
+                            <div class="form-group">
+                                <textarea class="form-control" id="bodyInput" rows="7" placeholder="Body ..."></textarea>
+                            </div>
+                            <fieldset class="form-group">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio-primary" type="radio" checked name="inlineRadioOptions" value="primary">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio-secondary" type="radio" name="inlineRadioOptions" value="secondary">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio-success" type="radio" name="inlineRadioOptions" value="success">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio-danger" type="radio" name="inlineRadioOptions" value="danger">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio-warning" type="radio" name="inlineRadioOptions" value="warning">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio-info" type="radio" name="inlineRadioOptions" value="info">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input radio-white" type="radio" name="inlineRadioOptions" value="white">
+                                </div>
+                            </fieldset>
+                            <button type="submit" class="btn btn-primary float-right">Add</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

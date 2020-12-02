@@ -105,6 +105,7 @@ $(document).ready(function () {
     $("#headerInput").val("");
     $("#bodyInput").val("");
     loadElement(item);
+    $("#stickyForm").modal("toggle");
   });
 
   $(document).on("click", ".remove", function (e) {
