@@ -144,7 +144,9 @@ $(document).ready(function () {
 
   $(document).on("change", ".navbar input", function (e) {
     e.preventDefault();
-    var radioValue = $("input[name='inlineRadioOptions']:checked").val();
+    var radioValue = $(
+      ".navbar input[name='inlineRadioOptions']:checked"
+    ).val();
     $(".card-columns > .card").each(function () {
       if (radioValue != "all" && !$(this).hasClass("bg-" + radioValue)) {
         $(this).hide();
