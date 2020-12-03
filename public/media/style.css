@@ -98,7 +98,6 @@ body {
 
 .card:hover {
   box-shadow: 8px 8px 8px #bababa;
-  transform: scale(1.05);
   cursor: pointer;
 }
 
