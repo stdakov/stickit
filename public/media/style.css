@@ -114,6 +114,72 @@ body {
   padding-top: 60px;
 }
 
-.navbar {
-  padding: 5 10 5 10 !important;
+.radio-all[type="radio"]:checked::before {
+  background: #e1451d;
+  background: -moz-linear-gradient(
+    left,
+    #e1451d 0,
+    #fdff47 17%,
+    #86f9fe 50%,
+    #2900f8 65%,
+    #6e00f8 74%,
+    #e33df9 83%,
+    #e14423 100%
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #e1451d),
+    color-stop(17%, #fdff47),
+    color-stop(50%, #86f9fe),
+    color-stop(65%, #2900f8),
+    color-stop(74%, #6e00f8),
+    color-stop(83%, #e33df9),
+    color-stop(100%, #e14423)
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #e1451d 0,
+    #fdff47 17%,
+    #86f9fe 50%,
+    #2900f8 65%,
+    #6e00f8 74%,
+    #e33df9 83%,
+    #e14423 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    #e1451d 0,
+    #fdff47 17%,
+    #86f9fe 50%,
+    #2900f8 65%,
+    #6e00f8 74%,
+    #e33df9 83%,
+    #e14423 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    #e1451d 0,
+    #fdff47 17%,
+    #86f9fe 50%,
+    #2900f8 65%,
+    #6e00f8 74%,
+    #e33df9 83%,
+    #e14423 100%
+  );
+  background: linear-gradient(
+    left,
+    #e1451d 0,
+    #fdff47 17%,
+    #86f9fe 50%,
+    #2900f8 65%,
+    #6e00f8 74%,
+    #e33df9 83%,
+    #e14423 100%
+  );
+}
+
+.radio-all[type="radio"]::before {
+  border: 2px solid #585858;
 }

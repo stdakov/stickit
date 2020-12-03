@@ -100,7 +100,7 @@ $(document).ready(function () {
       alert("The body is empty!");
       return false;
     }
-    var radioValue = $("input[name='inlineRadioOptions']:checked").val();
+    var radioValue = $("form input[name='inlineRadioOptions']:checked").val();
     var item = LocalStorage.add(title, body, radioValue);
     $("#headerInput").val("");
     $("#bodyInput").val("");
@@ -140,6 +140,18 @@ $(document).ready(function () {
     $("#exampleModalLabel").text(item.title);
     $("#exampleModalBody").html(item.body);
     $("#exampleModal").modal();
+  });
+
+  $(document).on("change", ".navbar input", function (e) {
+    e.preventDefault();
+    var radioValue = $("input[name='inlineRadioOptions']:checked").val();
+    $(".card-columns > .card").each(function () {
+      if (radioValue != "all" && !$(this).hasClass("bg-" + radioValue)) {
+        $(this).hide();
+      } else {
+        $(this).show();
+      }
+    });
   });
 
   function loadElement2(item) {

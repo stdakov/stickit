@@ -19,7 +19,10 @@
         <a class="navbar-brand" href="#">Stick it</a>
         <fieldset class="form-group">
             <div class="form-check form-check-inline">
-                <input class="form-check-input radio-primary" type="radio" checked name="inlineRadioOptions" value="primary">
+                <input class="form-check-input radio-all" type="radio" checked name="inlineRadioOptions" value="all">
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input radio-primary" type="radio" name="inlineRadioOptions" value="primary">
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input radio-secondary" type="radio" name="inlineRadioOptions" value="secondary">
