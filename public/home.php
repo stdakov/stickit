@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content="Store notes in your browser." />
 
-    <script async defer data-website-id="04cf51da-ca88-406a-93e1-7bca775bbd0d" src="https://stats.dakovdev.com/umami.js"></script>
+    <script async defer data-website-id="04cf51da-ca88-406a-93e1-7bca775bbd0d" src="https://st.dakovdev.com/umami.js"></script>
 </head>
 
 <body>
